@@ -46,7 +46,7 @@ public class UserController {
     public ResponseEntity<String> createUsers(@RequestBody UserRequest userRequest) {
 
         userService.addUsers(userRequest);
-        return ResponseEntity.ok("user added successfully");
+        return ResponseEntity.ok("user added successfully  wohooooo");
 
     }
 
