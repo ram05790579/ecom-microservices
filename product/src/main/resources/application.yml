@@ -1,0 +1,43 @@
+
+#          server:
+#            port: 8081
+#
+#          spring:
+#            application:
+#              name: product-service
+#
+#            datasource:
+#              url: jdbc:postgresql://ep-muddy-pine-an7fgr7q-pooler.c-6.us-east-1.aws.neon.tech/product?sslmode=require&channel_binding=require
+#              username: neondb_owner
+#              password: npg_ViNAKh34ZdzG
+#
+#            jpa:
+#              database: POSTGRESQL
+#              show-sql: true
+#              hibernate:
+#                ddl-auto: update
+#
+#
+          server:
+            port: 8081
+
+          spring:
+            application:
+              name: product-service
+
+
+
+            datasource:
+              url: jdbc:postgresql://localhost:5432/product
+              username: postgres
+              password: postgres123
+
+            jpa:
+              database: POSTGRESQL
+              show-sql: true
+              hibernate:
+                ddl-auto: update
+                database-platform: org.hibernate.dialect.PostgreSQLDialect
+
+
+

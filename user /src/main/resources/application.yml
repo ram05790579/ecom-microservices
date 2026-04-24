@@ -1,0 +1,21 @@
+server:
+  port: 8082
+
+spring:
+  application:
+    name: user-service
+
+  data:
+    mongodb:
+      uri: mongodb://localhost:27017/userdb
+#      uri: mongodb+srv://ram0579:Hanu%400579@user.stb409z.mongodb.net/userdb?retryWrites=true&w=majority
+
+
+
+
+
+
+
+
+
+

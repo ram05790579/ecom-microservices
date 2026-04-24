@@ -1,0 +1,21 @@
+server:
+  port: 8083
+
+spring:
+  application:
+    name: order-service
+
+
+
+  datasource:
+    url: jdbc:postgresql://localhost:5432/order
+    username: postgres
+    password: postgres123
+
+  jpa:
+    database: POSTGRESQL
+    show-sql: true
+    hibernate:
+      ddl-auto: update
+      database-platform: org.hibernate.dialect.PostgreSQLDialect
+
