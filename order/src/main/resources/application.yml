@@ -1,21 +1,24 @@
-server:
-  port: 8083
+#server:
+#  port: 8083
 
 spring:
   application:
     name: order-service
 
+  config:
+    import: optional:configserver:http://localhost:8888
 
 
-  datasource:
-    url: jdbc:postgresql://localhost:5432/order
-    username: postgres
-    password: postgres123
 
-  jpa:
-    database: POSTGRESQL
-    show-sql: true
-    hibernate:
-      ddl-auto: update
-      database-platform: org.hibernate.dialect.PostgreSQLDialect
+#  datasource:
+#    url: jdbc:postgresql://localhost:5432/order
+#    username: postgres
+#    password: postgres123
+#
+#  jpa:
+#    database: POSTGRESQL
+#    show-sql: true
+#    hibernate:
+#      ddl-auto: update
+#      database-platform: org.hibernate.dialect.PostgreSQLDialect
 

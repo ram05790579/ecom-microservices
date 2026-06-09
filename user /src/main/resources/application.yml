@@ -1,14 +1,37 @@
-server:
-  port: 8082
+#server:
+#  port: 8080
+#
+#spring:
+#  application:
+#    name: user-service
+#
+#  data:
+#    mongodb:
+#      uri: mongodb://localhost:27017/userdb
+#      uri: mongodb+srv://ram0579:Hanu%400579@user.stb409z.mongodb.net/userdb?retryWrites=true&w=majority
 
 spring:
   application:
     name: user-service
 
-  data:
-    mongodb:
-      uri: mongodb://localhost:27017/userdb
-#      uri: mongodb+srv://ram0579:Hanu%400579@user.stb409z.mongodb.net/userdb?retryWrites=true&w=majority
+  config:
+   import: optional:configserver:http://localhost:8888
+
+
+logging:
+  level:
+    root: INFO
+    com.ecommerce.user: TRACE
+
+  file:
+    name: logs/${spring.application.name}.log
+
+    logback:
+      rollingpolicy:
+        max-file-size: 5MB
+        max-history: 7
+
+
 
 
 

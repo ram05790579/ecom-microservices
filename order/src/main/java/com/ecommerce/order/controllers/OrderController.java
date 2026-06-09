@@ -1,4 +1,4 @@
-package com.ecommerce.order.controller;
+package com.ecommerce.order.controllers;
 
 import com.ecommerce.order.dtos.OrderResponse;
 import com.ecommerce.order.services.OrderService;

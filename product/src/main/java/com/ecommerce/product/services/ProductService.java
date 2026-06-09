@@ -91,4 +91,9 @@ public class ProductService {
                 .map(this::mapToProductResponse)
                 .toList();
     }
+
+    public Optional<ProductResponse> getProductById(String id) {
+        return productRepository.findByIdAndActiveTrue(Long.valueOf(id))
+                .map(this::mapToProductResponse);
+    }
 }

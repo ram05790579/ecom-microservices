@@ -1,0 +1,55 @@
+server:
+  port: 8083
+
+spring:
+  application:
+    name: order-service
+
+  rabbitmq:
+    host: chameleon.lmq.cloudamqp.com
+    port: 5672
+    username: hqnupnut
+    password: ucttjXQXiFiZu_tOp9jqazxBD8VqmfA4
+    virtual-host: hqnupnut
+
+
+
+
+
+  datasource:
+    url: ${DB_URL}
+    username: ${DB_USER}
+    password: ${DB_PASSWORD}
+
+  jpa:
+    database: POSTGRESQL
+    show-sql: true
+    hibernate:
+      ddl-auto: update
+      database-platform: org.hibernate.dialect.PostgreSQLDialect
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+
+eureka:
+    client:
+      serviceUrl:
+        defaultZone: http://localhost:8761/eureka
+      register-with-eureka: true
+      fetch-registry: true
+
+logging:
+    level:
+      root: INFO
+      com.ecommerce.user: TRACE
+
+    file:
+      name: logs/${spring.application.name}.log
+
+      logback:
+        rollingpolicy:
+          max-file-size: 5MB
+          max-history: 7

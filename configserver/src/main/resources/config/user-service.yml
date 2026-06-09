@@ -1,0 +1,58 @@
+server:
+  port: 8080
+
+spring:
+  application:
+    name: user-service
+
+
+  rabbitmq:
+    host: chameleon.lmq.cloudamqp.com
+    port: 5672
+    username: hqnupnut
+    password: ucttjXQXiFiZu_tOp9jqazxBD8VqmfA4
+    virtual-host: hqnupnut
+
+  data:
+    mongodb:
+      uri: mongodb://localhost:27017/userdb
+#      uri: mongodb+srv://ram0579:Hanu%400579@user.stb409z.mongodb.net/userdb?retryWrites=true&w=majority
+
+
+
+management:
+          endpoints:
+            web:
+              exposure:
+                include: "*"
+
+app:
+  message: "hello user!!!"
+
+eureka:
+    client:
+      serviceUrl:
+        defaultZone: http://localhost:8761/eureka
+      register-with-eureka: true
+      fetch-registry: true
+
+
+logging:
+  level:
+    root: INFO
+    com.ecommerce.user: TRACE
+
+  file:
+    name: logs/${spring.application.name}.log
+
+    logback:
+      rollingpolicy:
+        max-file-size: 5MB
+        max-history: 7
+
+
+
+
+
+
+

@@ -1,0 +1,28 @@
+spring:
+  application:
+    name: configserver
+
+
+  rabbitmq:
+      host: chameleon.lmq.cloudamqp.com
+      port: 5672
+      username: hqnupnut
+      password: ucttjXQXiFiZu_tOp9jqazxBD8VqmfA4
+      virtual-host: hqnupnut
+
+  profiles:
+    active: native
+
+  cloud:
+    config:
+      server:
+        native:
+          search-locations: file:/Users/sairambellapukonda/Downloads/ecom-microservices/configserver/src/main/resources/config
+server:
+  port: 8888
+
+management:
+      endpoints:
+        web:
+          exposure:
+            include: "*"
